@@ -40,6 +40,8 @@ class Player(CircleShape):
             if self.timer > 0:
                 return    
             self.shoot()
+        if keys[pygame.K_ESCAPE]:
+            pygame.quit()
 
     def move(self, dt):
         forward = pygame.Vector2(0, 1).rotate(self.rotation)
